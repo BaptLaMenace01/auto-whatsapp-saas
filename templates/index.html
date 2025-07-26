@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto WhatsApp SaaS</title>
+</head>
+<script>
+  function confirmerEnvoi() {
+    return confirm("Es-tu sûr de vouloir envoyer cette campagne WhatsApp ?");
+  }
+</script>
+
+<body>
+  <h1>📲 Planifier une campagne WhatsApp</h1>
+
+<form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return confirmerEnvoi()">
+    <p>
+      <a href="/download-template" target="_blank">📥 Télécharger le template CSV</a>
+    </p>
+
+    <label for="csv_file">📂 Fichier CSV :</label><br>
+    <input type="file" name="csv_file" required><br><br>
+
+    <label for="message">💬 Message personnalisé :</label><br>
+    <textarea name="message" rows="4" cols="50" placeholder="Salut {{nom}}, voici une offre pour toi..." required></textarea><br><br>
+
+    <button type="submit">✅ Envoyer maintenant</button>
+  </form>
+</body>
+</html>
+

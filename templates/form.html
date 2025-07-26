@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto WhatsApp SaaS</title>
+</head>
+<body>
+  <h1>Planifier une campagne WhatsApp</h1>
+  <form id="form" method="POST" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="csv" required><br><br>
+    <label>Date & Heure d'envoi :</label><br>
+    <input type="datetime-local" name="date_envoi" required><br><br>
+    <label>Message :</label><br>
+    <textarea name="message" rows="5" cols="40" placeholder="Bonjour {{prenom}}" required></textarea><br><br>
+    <button type="submit">Planifier l'envoi</button>
+  </form>
+</body>
+</html>
